@@ -1,0 +1,5 @@
+Change Component Comment : Designator=10k Old Comment=1k New Comment=10K
+Change Component Designator: OldDesignator=10k NewDesignator=R40
+Change Net Name : Old Net Name=Net10k_1 New Net Name=NetPS1_3
+Change Net Name : Old Net Name=NetR15_1 New Net Name=GND_ADC
+Added Room: Name=Schematic_Devices
