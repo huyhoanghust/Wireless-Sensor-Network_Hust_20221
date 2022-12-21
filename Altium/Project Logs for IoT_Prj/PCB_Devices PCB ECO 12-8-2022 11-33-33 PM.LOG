@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=RL1 Pin=U2-30
+Removed Pin From Net: NetName=RL2 Pin=U2-31
+Removed Pin From Net: NetName=RL3 Pin=U2-32
+Removed Pin From Net: NetName=RL4 Pin=U2-33
+Added Pin To Net: NetName=RL4 Pin=U2-30
+Added Pin To Net: NetName=RL3 Pin=U2-31
+Added Pin To Net: NetName=RL2 Pin=U2-32
+Added Pin To Net: NetName=RL1 Pin=U2-33
+Added Room: Name=Schematic_Devices

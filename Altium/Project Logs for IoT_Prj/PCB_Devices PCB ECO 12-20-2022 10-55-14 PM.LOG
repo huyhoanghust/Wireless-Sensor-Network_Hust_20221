@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=PIN_lipo Pin=BT1-1
+Removed Pin From Net: NetName=GND Pin=BT1-2
+Removed Member From Class: ClassName=Schematic_Devices Member=BT1
+Added Member To Class: ClassName=Schematic_Devices Member=Component RFID1 RFID
+Added Room: Name=Schematic_Devices

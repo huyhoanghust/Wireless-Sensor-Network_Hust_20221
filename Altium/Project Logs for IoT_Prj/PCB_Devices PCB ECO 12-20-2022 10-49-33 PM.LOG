@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=GND Pin=R15-1
+Removed Pin From Net: NetName=LIPO Pin=S1-2
+Removed Pin From Net: NetName=PIN_lipo Pin=S1-3
+Removed Member From Class: ClassName=Schematic_Devices Member=S1
+Change Component Footprint: Designator=J7 Old Footprint=0473461001 New Footprint=USB-M1
+Change Component Designator: OldDesignator=J7 NewDesignator=J3
+Added Component: Designator=R22(RES-SMD-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Component: Designator=R23(RES-SMD-0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R20-1
+Added Pin To Net: NetName=GND Pin=R22-2
+Added Pin To Net: NetName=PIN_lipo Pin=R23-1
+Added Pin To Net: NetName=LIPO Pin=R23-2
+Added Pin To Net: NetName=GND Pin=U7-3
+Added Pin To Net: NetName=NetR15_1 Pin=R15-1
+Added Pin To Net: NetName=NetR15_1 Pin=R22-1
+Added Net: Name=NetR15_1
+Added Member To Class: ClassName=Schematic_Devices Member=Component R22 0R
+Added Member To Class: ClassName=Schematic_Devices Member=Component R23 0R
+Added Room: Name=Schematic_Devices

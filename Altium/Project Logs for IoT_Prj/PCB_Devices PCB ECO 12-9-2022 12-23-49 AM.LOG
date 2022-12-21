@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=Light_1 Pin=U2-6
+Removed Pin From Net: NetName=Light_2 Pin=U2-7
+Added Pin To Net: NetName=Light_2 Pin=U2-6
+Added Pin To Net: NetName=Light_1 Pin=U2-7
+Added Room: Name=Schematic_Devices

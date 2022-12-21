@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=PS? NewDesignator=PS1
+Added Component: Designator=IC10(SOT23-5)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=Schematic_Devices Member=Component IC10 RT9013
+Added Room: Name=Schematic_Devices

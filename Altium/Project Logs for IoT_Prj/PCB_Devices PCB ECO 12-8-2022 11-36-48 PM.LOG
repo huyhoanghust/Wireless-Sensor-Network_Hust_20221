@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=+3V3 Pin=IC1-3
+Removed Pin From Net: NetName=GND Pin=LED2-2
+Removed Pin From Net: NetName=+3V3 Pin=R3-2
+Removed Member From Class: ClassName=Schematic_Devices Member=IC1
+Removed Member From Class: ClassName=Schematic_Devices Member=LED2
+Removed Member From Class: ClassName=Schematic_Devices Member=R3
+Added Component: Designator=IC2(DS18S20)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+3V3 Pin=IC2-3
+Added Member To Class: ClassName=Schematic_Devices Member=Component IC2 DS18B20

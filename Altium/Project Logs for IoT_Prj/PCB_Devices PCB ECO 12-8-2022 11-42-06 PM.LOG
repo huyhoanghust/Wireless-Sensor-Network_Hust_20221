@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=+3V3 Pin=IC2-3
+Removed Member From Class: ClassName=Schematic_Devices Member=IC2
+Added Component: Designator=*(DHT11_MODULE)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+3V3 Pin=*-1
+Added Pin To Net: NetName=TEMP Pin=*-2
+Added Pin To Net: NetName=GND Pin=*-3
+Added Member To Class: ClassName=Schematic_Devices Member=Component * DHT11_MODULE
+Added Room: Name=Schematic_Devices
