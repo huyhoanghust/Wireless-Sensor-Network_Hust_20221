@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=C14 Old Footprint=CAP_0402 New Footprint=CAP_0805
+Change Component Footprint: Designator=C15 Old Footprint=CAP_0402 New Footprint=CAP_0805
+Change Component Comment : Designator=R24 Old Comment=1k New Comment=10k
+Change Component Comment : Designator=C14 Old Comment=104 New Comment=100nF
+Change Component Comment : Designator=C15 Old Comment=104 New Comment=100nF
