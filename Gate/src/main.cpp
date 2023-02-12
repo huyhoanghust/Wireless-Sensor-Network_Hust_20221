@@ -3,6 +3,9 @@
 #include <mqtt.h>
 #include <ota.h>
 
+unsigned long last_time = 0;
+unsigned long delay_time = 1000;
+
 void callback(char *topic, byte *payload, unsigned int length)
 {
   char status[50] = {0};
@@ -161,7 +164,12 @@ void setup()
 
 void loop()
 {
-  thingboard_gate_receive();
+  // if(millis() - last_time > delay_time)
+  // {
+  //   thingboard_gate_receive();
+  //   last_time = millis();
+  // }
+  //thingboard_gate_receive();
   client.loop();
   if (!client.connected())
   {
