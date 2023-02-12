@@ -3,6 +3,7 @@
 
 #define sensor 34
 #define relay 16
+#define buzzer 14
 
 unsigned long last_time = 0;
 unsigned long delay_time = 1000;
@@ -56,6 +57,8 @@ void setup()
   connect_to_broker();
   pinMode(relay, OUTPUT);
   digitalWrite(relay,HIGH);
+  pinMode(relay, OUTPUT);
+  digitalWrite(relay,HIGH);
 }
 
 void loop()
@@ -71,11 +74,13 @@ void loop()
     {
       Serial.println("Gas leak!!!!");
       digitalWrite(relay,HIGH);
+      digitalWrite(buzzer, HIGH);
     }
     else
     {
       Serial.println("No Gas, it's OKE");
       digitalWrite(relay,LOW);
+      digitalWrite(buzzer, LOW);
     }
     client.publish(MQTT_NODE_GAS_PUB,buf_gas);
     last_time = millis();
