@@ -2,7 +2,7 @@
 #include <mqtt.h>
 #include <remote.h>
 
-#define sensor  35
+#define sensor 35
 #define relay 16
 int count1 = 0;
 enum
@@ -11,9 +11,19 @@ enum
   notfix
 };
 
-int fix; 
+int fix;
 
 int val_sensor;
+
+unsigned long last_time = 0;
+unsigned long delay_time = 2000;
+
+enum
+{
+  manual_mode,
+  auto_mode
+};
+int mode;
 
 void callback(char *topic, byte *payload, unsigned int length)
 {
@@ -37,12 +47,12 @@ void callback(char *topic, byte *payload, unsigned int length)
   if (strcmp(topic, MQTT_NODE_LIGHT_SUB) == 0)
   {
     Serial.println("OK topic");
-    if(strcmp(status, "ON") == 0)
+    if (strcmp(status, "ON") == 0)
     {
       digitalWrite(relay, LOW);
       Serial.println("relay on");
     }
-    if(strcmp(status, "OFF") == 0)
+    if (strcmp(status, "OFF") == 0)
     {
       digitalWrite(relay, HIGH);
       Serial.println("relay off");
@@ -56,42 +66,49 @@ void setup()
 {
   Serial.begin(9600);
   Serial.setTimeout(500);
-  setup_wifi();
-  client.setServer(MQTT_SERVER, MQTT_PORT);
-  client.setCallback(callback);
-  connect_to_broker();
+  // setup_wifi();
+  // client.setServer(MQTT_SERVER, MQTT_PORT);
+  // client.setCallback(callback);
+  // connect_to_broker();
   irrecv.enableIRIn(); // Start the receiver
   pinMode(relay, OUTPUT);
+  digitalWrite(relay,HIGH);
+  Serial.println("Okascacsascas");
 }
 
 void loop()
 {
-  //Read analog light sensor
-  char buf[10] = {0};
-  val_sensor = analogRead(sensor);
-  count1 ++;
-  if (count1 == 5)
-  {
-    sprintf(buf, "%d", val_sensor);
-    Serial.print("Value of light sensor: ");
-    Serial.println(buf);
-    client.publish(MQTT_NODE_LIGHT_PUB, buf);
-    count1 = 0;
-  }
-  if(val_sensor < 1000)
-  {
-    Serial.println("Led OFF");
-    digitalWrite(relay, HIGH);
-  }
-  else
-  {
-    digitalWrite(relay, LOW);
-    Serial.println("Led ON");
-  }
-  client.loop();
-  if (!client.connected())
-  {
-    connect_to_broker();
-  }
-  delay(500);
+  infrared();
+  // Read analog light sensor
+  // if (millis() - last_time > delay_time)
+  // {
+  //   char buf[10] = {0};
+  //   val_sensor = analogRead(sensor);
+  //   count1++;
+  //   if (count1 == 5)
+  //   {
+  //     sprintf(buf, "%d", val_sensor);
+  //     Serial.print("Value of light sensor: ");
+  //     Serial.println(buf);
+  //     client.publish(MQTT_NODE_LIGHT_PUB, buf);
+  //     count1 = 0;
+  //   }
+  //   if (val_sensor < 800)
+  //   {
+  //     Serial.println("Led OFF");
+  //     digitalWrite(relay, HIGH);
+  //   }
+  //   else
+  //   {
+  //     digitalWrite(relay, LOW);
+  //     Serial.println("Led ON");
+  //   }
+  //   last_time = millis();
+  // }
+  // client.loop();
+  // if (!client.connected())
+  // {
+  //   connect_to_broker();
+  // }
+  // delay(500);
 }
