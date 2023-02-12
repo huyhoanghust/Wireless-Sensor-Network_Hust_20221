@@ -41,12 +41,12 @@ void callback(char *topic, byte *payload, unsigned int length)
     if (strcmp(status, "Close_door") == 0)
     {
       Serial.println("Close the door");
-      digitalWrite(relay, LOW);
+      digitalWrite(relay, HIGH);
     }
     else if (strcmp(status, "Open_door") == 0)
     {
       Serial.println("Open the door");
-      digitalWrite(relay, HIGH);
+      digitalWrite(relay, LOW);
     }
   }
   memset(status, '\0', sizeof(status));
@@ -150,34 +150,34 @@ void loop()
   {
   case Hoang:
     Serial.println("Relative!!");
-    digitalWrite(relay, HIGH);
-    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Hoang");
-    delay(2000);
     digitalWrite(relay, LOW);
+    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Hoang");
+    delay(4000);
+    digitalWrite(relay, HIGH);
     client.publish(MQTT_NODE_RFID_PUB, "The door was closed");
     break;
   case Huy:
     Serial.println("Relative!!");
-    digitalWrite(relay, HIGH);
-    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Huy");
-    delay(2000);
     digitalWrite(relay, LOW);
+    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Huy");
+    delay(4000);
+    digitalWrite(relay, HIGH);
     client.publish(MQTT_NODE_RFID_PUB, "The door was closed");
     break;
   case Thanh:
     Serial.println("Relative!!");
-    digitalWrite(relay, HIGH);
-    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Thanh");
-    delay(2000);
     digitalWrite(relay, LOW);
+    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by Thanh");
+    delay(4000);
+    digitalWrite(relay, HIGH);
     client.publish(MQTT_NODE_RFID_PUB, "The door was closed");
     break;
   case anomynous:
     Serial.println("Relative!!");
-    digitalWrite(relay, HIGH);
-    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by anomynous");
-    delay(2000);
     digitalWrite(relay, LOW);
+    client.publish(MQTT_NODE_RFID_PUB, "The door was opened by anomynous");
+    delay(4000);
+    digitalWrite(relay, HIGH);
     client.publish(MQTT_NODE_RFID_PUB, "The door was closed");
     break;
   }
