@@ -15,4 +15,10 @@ Tạo Device theo hướng dẫn: https://thingsboard.io/docs/edge/getting-start
 - Tạo Rule chain để tạo và xóa cảnh báo khi thông số vượt ngưỡng https://thingsboard.io/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/
 - Tạo Dashboard và cấu hình Widget để hiển thị và điều khiển: https://thingsboard.io/docs/user-guide/contribution/widgets-development/
 
-Cấu hình bản tin để gửi lệnh theo RPC ở phần Advanced của Control Widget 
+Cấu hình bản tin để gửi bao gồm Method và params lệnh theo RPC ở phần Advanced của Control Widget (Hướng dẫn về RPC: https://thingsboard.io/docs/user-guide/rpc/)
+
+Sau đó Assign Dashboard xuống Edge để đồng bộ 
+## Triển khai Web và App
+- Sử dụng trực tiếp trang Web và App do Thingsboard cung cấp chỉ cần đăng nhập vào tài khoản đã đăng ký
+
+
