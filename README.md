@@ -35,6 +35,7 @@ fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
 
 ## Tổ chức file trong folder Code
 - Folder Code nằm trong nhánh "Code" của Repo dự án
+- 
 ![image](https://user-images.githubusercontent.com/83686238/220580238-cc6245a1-dc44-4507-b863-d7bd55901ad6.png)
 
 - Dự án gồm 4 Node và 1 Gate do vậy sẽ có 4 folder về Node và 1 folder về Gateway được tổ chức file tương tự nhau
@@ -43,5 +44,6 @@ fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
 ![image](https://user-images.githubusercontent.com/83686238/220577655-75e574f0-ccc3-4ff4-8af0-9df44f0e8674.png)
 
 - Sau khi đã download và cấu hình xong, nhấn vào "build" để compile code sau đó "upload" để nạp code
+- 
 ![image](https://user-images.githubusercontent.com/83686238/220578524-87e6995f-822d-4aa7-9b8d-f78b24f5611a.png)
 
