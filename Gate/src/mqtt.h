@@ -1,3 +1,13 @@
+/**
+ * @file mqtt.h
+ * @author hoanghuyhust (hoangnh191855@sis.hust.edu.vn)
+ * @brief 
+ * @version 0.1
+ * @date 2023-02-22
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <PubSubClient.h>
 #include <connect_wifi.h>
 #include <cstring>
@@ -21,6 +31,7 @@ String clientId = "Device00";
 #define MQTT_NODE_LIGHT_SUB "Project/light_sub"
 
 #define MQTT_NODE_GAS_PUB "Project/gas_pub"
+
 #define MQTT_NODE_GAS_SUB "Project/gas_sub"
 
 #define MQTT_CLOUD_PUB  "Project/cloud_pub"

@@ -1,3 +1,13 @@
+/**
+ * @file ota.h
+ * @author hoanghuyhust (hoangnh191855@sis.hust.edu.vn)
+ * @brief 
+ * @version 0.1
+ * @date 2023-02-22
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <HTTPUpdate.h>
 
 uint32_t updateCounter = 0;

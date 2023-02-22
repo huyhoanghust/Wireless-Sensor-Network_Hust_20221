@@ -1,6 +1,16 @@
+/**
+ * @file connect_wifi.h
+ * @author hoanghuyhust (hoangnh191855@sis.hust.edu.vn)
+ * @brief 
+ * @version 0.1
+ * @date 2023-02-22
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <WiFi.h>
-const char *ssid = "Mandevices Laboratory";
-const char *password = "mandevicesvippro";
+const char *ssid = "Zhuge Liang";
+const char *password = "facebook";
 // const char *ssid = "P514";
 // const char *password = "514a62001";
 int count = 0;

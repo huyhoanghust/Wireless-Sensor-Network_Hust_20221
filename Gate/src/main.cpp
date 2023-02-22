@@ -1,3 +1,13 @@
+/**
+ * @file main.cpp
+ * @author hoanghuyhust (hoangnh191855@sis.hust.edu.vn)
+ * @brief 
+ * @version 0.1
+ * @date 2023-02-22
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <Arduino.h>
 #include <cloud.h>
 #include <mqtt.h>
@@ -52,7 +62,7 @@ void thingboard_gate_receive()
 {
   // http.addHeader("Content-Type", "application/json");
   // Serial.print("[HTTP] BEGIN...\n");
-  http.begin(clienthttp, "http://demo.thingsboard.io/api/v1/TAUpxIgVr0ulCTGSZqFd/rpc");
+  http.begin(clienthttp, "http://thingsboard.cloud/api/v1/dlN4nUZmFL5afj9OGn7a/rpc");
   // Serial.print("[HTTP] GET...\n");
   int httpCode = http.GET();
   if (httpCode > 0)
@@ -164,11 +174,11 @@ void setup()
 
 void loop()
 {
-  // if(millis() - last_time > delay_time)
-  // {
-  //   thingboard_gate_receive();
-  //   last_time = millis();
-  // }
+  if(millis() - last_time > delay_time)
+  {
+    thingboard_gate_receive();
+    last_time = millis();
+  }
   //thingboard_gate_receive();
   client.loop();
   if (!client.connected())
