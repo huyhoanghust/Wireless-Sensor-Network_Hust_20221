@@ -39,6 +39,7 @@ fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
 
 - Dự án gồm 4 Node và 1 Gate do vậy sẽ có 4 folder về Node và 1 folder về Gateway được tổ chức file tương tự nhau
 - Mỗi folder sẽ chứa main source code trong thư mục "src" bao gồm file main.cpp và các file.h khác; folder ".pio" sẽ chưa các thư viện hỗ trợ trong dự án; file "platformio.ini" sẽ bao gồm các cấu hình như monitor speed và monitor port cùng với install thư viện về dự án
+
 ![image](https://user-images.githubusercontent.com/83686238/220577655-75e574f0-ccc3-4ff4-8af0-9df44f0e8674.png)
 
 - Sau khi đã download và cấu hình xong, nhấn vào "build" để compile code sau đó "upload" để nạp code
