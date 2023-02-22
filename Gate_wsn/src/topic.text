@@ -1,0 +1,16 @@
+#define MQTT_NODE_RFID_PUB "Project/rfid_pub"
+#define MQTT_NODE_RFID_SUB "Project/rfid_sub"
+
+#define MQTT_NODE_TEMP_PUB "Project/temp_pub"
+#define MQTT_NODE_TEMP_SUB "Project/temp_sub"
+
+#define MQTT_NODE_LIGHT_PUB "Project/light_pub"
+#define MQTT_NODE_LIGHT_SUB "Project/light_sub"
+
+#define MQTT_NODE_GAS_PUB "Project/gas_pub"
+#define MQTT_NODE_GAS_SUB "Project/gas_sub"
+
+#define MQTT_RESPONSE_TOPIC "Test/Response"
+
+#define MQTT_CLOUD_PUB  "Project/cloud_pub"
+#define MQTT_CLOUD_SUB  "Project/cloud_sub"
