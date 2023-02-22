@@ -2,7 +2,7 @@
 #include <mqtt.h>
 #include <rfid.h>
 
-#define relay 16
+#define relay 2
 #define but_adc 14
 #define pin_adc 33
 #define led_1 25
@@ -118,7 +118,7 @@ void setup()
 {
   Serial.begin(9600);
   Serial.setTimeout(500);
-  // set up wifi
+  //set up wifi
   setup_wifi();
   // setup mqtt config
   client.setServer(MQTT_SERVER, MQTT_PORT);
@@ -136,6 +136,8 @@ void setup()
   // init timer
   start_timer();
   // config led display
+  pinMode(relay, OUTPUT);
+  digitalWrite(relay, HIGH);
   pinMode(led_1, OUTPUT);
   pinMode(led_2, OUTPUT);
   pinMode(led_3, OUTPUT);
@@ -144,7 +146,7 @@ void setup()
 
 void loop()
 {
-  // RFID
+  //RFID
   readRFID();
   switch (uidDec)
   {
