@@ -56,9 +56,7 @@ void setup()
   client.setCallback(callback);
   connect_to_broker();
   pinMode(relay, OUTPUT);
-  digitalWrite(relay,HIGH);
-  pinMode(relay, OUTPUT);
-  digitalWrite(relay,HIGH);
+  digitalWrite(relay,LOW);
 }
 
 void loop()
@@ -70,17 +68,17 @@ void loop()
     char buf_gas[10] = {0};
     sprintf(buf_gas,"%d",value);
     Serial.println(buf_gas);
-    if(value>1800)
+    if(value>60)
     {
       Serial.println("Gas leak!!!!");
       digitalWrite(relay,HIGH);
-      digitalWrite(buzzer, HIGH);
+      digitalWrite(buzzer, LOW);
     }
     else
     {
       Serial.println("No Gas, it's OKE");
       digitalWrite(relay,LOW);
-      digitalWrite(buzzer, LOW);
+      digitalWrite(buzzer, HIGH);
     }
     client.publish(MQTT_NODE_GAS_PUB,buf_gas);
     last_time = millis();
