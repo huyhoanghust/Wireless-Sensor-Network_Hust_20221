@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <mqtt.h>
-#include <remote.h>
+//#include <remote.h>
 
 #define sensor 35
 #define relay 16
@@ -66,11 +66,11 @@ void setup()
 {
   Serial.begin(9600);
   Serial.setTimeout(500);
-  // setup_wifi();
-  // client.setServer(MQTT_SERVER, MQTT_PORT);
-  // client.setCallback(callback);
-  // connect_to_broker();
-  irrecv.enableIRIn(); // Start the receiver
+  setup_wifi();
+  client.setServer(MQTT_SERVER, MQTT_PORT);
+  client.setCallback(callback);
+  connect_to_broker();
+  //irrecv.enableIRIn(); // Start the receiver
   pinMode(relay, OUTPUT);
   digitalWrite(relay,HIGH);
   Serial.println("Okascacsascas");
@@ -78,8 +78,13 @@ void setup()
 
 void loop()
 {
-  infrared();
-  // Read analog light sensor
+  delay(10000);
+  digitalWrite(relay,LOW);
+  delay(4000);
+  digitalWrite(relay,HIGH);
+  delay(500000);
+  // //infrared();
+  // // Read analog light sensor
   // if (millis() - last_time > delay_time)
   // {
   //   char buf[10] = {0};
@@ -93,16 +98,16 @@ void loop()
   //     client.publish(MQTT_NODE_LIGHT_PUB, buf);
   //     count1 = 0;
   //   }
-  //   if (val_sensor < 800)
-  //   {
-  //     Serial.println("Led OFF");
-  //     digitalWrite(relay, HIGH);
-  //   }
-  //   else
-  //   {
-  //     digitalWrite(relay, LOW);
-  //     Serial.println("Led ON");
-  //   }
+  //   // if (val_sensor < 1700)
+  //   // {
+  //   //   Serial.println("Led OFF");
+  //   //   digitalWrite(relay, HIGH);
+  //   // }
+  //   // else
+  //   // {  
+  //   //   digitalWrite(relay, LOW);
+  //   //   Serial.println("Led ON");
+  //   // }
   //   last_time = millis();
   // }
   // client.loop();
