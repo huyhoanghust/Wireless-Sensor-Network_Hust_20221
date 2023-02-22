@@ -22,3 +22,22 @@ Sau đó Assign Dashboard xuống Edge để đồng bộ
 - Sử dụng trực tiếp trang Web và App do Thingsboard cung cấp chỉ cần đăng nhập vào tài khoản đã đăng ký
 
 
+## Các Phần mềm và tool cần phải tải: 
+- Mqttfx đây là tool cho phép tạo Client để kiểm tra gói tin trong quá trình phát triển, download đường link sau: https://iowin.net/en/mqtt-fx/
+- Cài đặt IDE: Visual studio Code: https://code.visualstudio.com/download
+               Platform IO trong extension của VScode
+               ![image](https://user-images.githubusercontent.com/83686238/220578152-81848072-4d1e-48d4-9e55-b734bb5bd84f.png)
+
+- Cài đặt Broker Local cho phép điều khiển Local: https://www.hivemq.com/docs/hivemq/4.8/user-guide/getting-started.html
+fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
+- Cài đặt phần mềm ESPtouch trên ứng dụng CHPlay để cấu hình Wifi cho thiết bị 
+![image](https://user-images.githubusercontent.com/83686238/220579249-fb2c75d6-e7e8-47e9-b4f0-1ba0b838ecde.png)
+
+## Tổ chức file trong folder Code
+- Dự án gồm 4 Node và 1 Gate do vậy sẽ có 4 folder về Node và 1 folder về Gateway được tổ chức file tương tự nhau
+- Mỗi folder sẽ chứa main source code trong thư mục "src" bao gồm file main.cpp và các file.h khác; folder ".pio" sẽ chưa các thư viện hỗ trợ trong dự án; file "platformio.ini" sẽ bao gồm các cấu hình như monitor speed và monitor port cùng với install thư viện về dự án
+![image](https://user-images.githubusercontent.com/83686238/220577655-75e574f0-ccc3-4ff4-8af0-9df44f0e8674.png)
+
+- Sau khi đã download và cấu hình xong, nhấn vào "build" để compile code sau đó "upload" để nạp code
+![image](https://user-images.githubusercontent.com/83686238/220578524-87e6995f-822d-4aa7-9b8d-f78b24f5611a.png)
+
