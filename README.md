@@ -34,6 +34,9 @@ fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
 ![image](https://user-images.githubusercontent.com/83686238/220579249-fb2c75d6-e7e8-47e9-b4f0-1ba0b838ecde.png)
 
 ## Tổ chức file trong folder Code
+- Folder Code nằm trong nhánh "Code" của Repo dự án
+![image](https://user-images.githubusercontent.com/83686238/220580238-cc6245a1-dc44-4507-b863-d7bd55901ad6.png)
+
 - Dự án gồm 4 Node và 1 Gate do vậy sẽ có 4 folder về Node và 1 folder về Gateway được tổ chức file tương tự nhau
 - Mỗi folder sẽ chứa main source code trong thư mục "src" bao gồm file main.cpp và các file.h khác; folder ".pio" sẽ chưa các thư viện hỗ trợ trong dự án; file "platformio.ini" sẽ bao gồm các cấu hình như monitor speed và monitor port cùng với install thư viện về dự án
 ![image](https://user-images.githubusercontent.com/83686238/220577655-75e574f0-ccc3-4ff4-8af0-9df44f0e8674.png)
