@@ -1,6 +1,6 @@
 #include <WiFi.h>
-const char *ssid = "P514";
-const char *password = "514a62001";
+const char *ssid = "Mandevices Laboratory";
+const char *password = "mandevicesvippro";
 int count = 0;
 void setup_wifi()
 {
