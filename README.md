@@ -47,3 +47,5 @@ fbclid=IwAR2prAcaJGY28_f3wrOxMZF1SMVCM9_FRGjOtTYSNgHKVWW66K8jHxGFr1Q#download
 - 
 ![image](https://user-images.githubusercontent.com/83686238/220578524-87e6995f-822d-4aa7-9b8d-f78b24f5611a.png)
 
+## Đối với WSN
+- Folder code nằm trong nhánh codewsn với 2 folder là "Gate_wsn" và "Node_Sensor_Ds18b20"
